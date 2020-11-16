@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="template-PDF.css">
+</head>
+
+<style>
+    .texto {
+        white-space: pre-line;
+        line-height: 0.5cm;
+    }
+
+    p {
+        text-indent: 1.2em;
+    }
+
+    .notas {
+        border: 1px solid black;
+        padding: 10px;
+        font-size: 15px;
+    }
+</style>
+
+<body>
+
+    <!-- Informaçãoes gerais da fanfic -->
+
+    <h1 class="titulo"> {{titulo}} </h1>
+    <h2>Autor(es): {{autor}}</h2>
+    <p class="sinopse">{{sinopse}}</p>
+
+    <br></br>
+
+    <!-- Capítulos -->
+
+    {{#each capitulos}}
+
+    <h3> {{this.titulo}}</h3>
+
+    {{#if this.notas1}}
+    <p class="notas">
+        <b>Notas iniciais: </b>
+        {{this.notas1}}
+    </p>
+    {{/if}}
+
+    <p class="texto">{{{this.texto}}}</p>
+
+
+    {{#if this.notas2}}
+    <p class="notas">
+        <b>Notas finais: </b>
+        {{this.notas2}}
+    </p>
+    {{/if}}
+
+
+    <br></br>
+
+    {{/each}}
+
+</body>
+
+</html>
