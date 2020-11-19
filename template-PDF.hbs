@@ -27,32 +27,33 @@
 
     <!-- Informaçãoes gerais da fanfic -->
 
-    <h1 class="titulo"> {{titulo}} </h1>
-    <h2>Autor(es): {{autor}}</h2>
-    <p class="sinopse">{{sinopse}}</p>
+    <h1 class="titulo"> {{title}} </h1>
+    <h2>Autor(es): {{author}}</h2>
+    <p class="sinopse">{{summary}}</p>
 
     <br></br>
 
+
     <!-- Capítulos -->
 
-    {{#each capitulos}}
+    {{#each chapters}}
 
-    <h3> {{this.titulo}}</h3>
+    <h3> {{this.title}}</h3>
 
-    {{#if this.notas1}}
+    {{#if this.notes1}}
     <p class="notas">
         <b>Notas iniciais: </b>
-        {{this.notas1}}
+        {{this.notes1}}
     </p>
     {{/if}}
 
-    <p class="texto">{{{this.texto}}}</p>
+    <p class="texto">{{{this.text}}}</p>
 
 
-    {{#if this.notas2}}
+    {{#if this.notes2}}
     <p class="notas">
         <b>Notas finais: </b>
-        {{this.notas2}}
+        {{this.notes2}}
     </p>
     {{/if}}
 
